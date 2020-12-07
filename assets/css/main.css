@@ -1,0 +1,120 @@
+html, body{    
+    width: 100%;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    overflow-x: hidden;
+    background-color: rgb(228, 228, 228);
+    left: 0;
+    
+}
+
+header{ 
+    background-color: rgb(54, 54, 54);
+    color: white;   
+    width: 100%;
+
+}
+nav{
+    background-color: #880000;
+    box-shadow: 0 5px 5px -5px #333;
+}
+.filter{
+    margin:20px 20px 20px 30px;
+
+
+}
+#pageContainer{
+    margin:20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow:
+    0 0px 0.3px rgba(0, 0, 0, 0.02),
+    0 0px 0.7px rgba(0, 0, 0, 0.028),
+    0 0px 1.4px rgba(0, 0, 0, 0.035),
+    0 0px 2.5px rgba(0, 0, 0, 0.042),
+    0 0px 4.6px rgba(0, 0, 0, 0.05),
+    0 0px 11px rgba(0, 0, 0, 0.07);
+    height: 100%;
+    text-align: center;
+    align-items: center;
+
+}
+
+footer{
+    background-color: rgb(32, 32, 32);
+    color: rgb(206, 206, 206);   
+    padding: 25px;
+    left: 0;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.box {
+    box-shadow:
+    0 0px 0.3px rgba(0, 0, 0, 0.02),
+    0 0px 0.7px rgba(0, 0, 0, 0.028),
+    0 0px 1.4px rgba(0, 0, 0, 0.035),
+    0 0px 2.5px rgba(0, 0, 0, 0.042),
+    0 0px 4.6px rgba(0, 0, 0, 0.05),
+    0 0px 11px rgba(0, 0, 0, 0.07);
+    border-radius: 3px;
+    background-color: white;
+  }
+
+#movies-searchable{
+    margin-top: 20px;
+}
+
+section {
+    width: 100%;
+    text-align: center;
+}
+
+section img {
+    width: 200px;
+    margin: 10px;
+    transition: 250ms all;
+}
+
+section img:hover {
+    margin-left: 0 40px;
+    transform: scale(1.2);
+    cursor: pointer;
+
+}
+
+.content{
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.925);
+    border-radius: 10px;
+    display: none;
+    padding: 15px;
+    position: fixed;
+    top: 10px;
+    margin: 20px;
+    z-index: 9999;
+}
+#content-close{
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    text-align: right;
+}
+.content div {
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px;
+}
+.content-display{
+    display: block;
+}
+.movies-title{
+    font-size:26px;
+    box-shadow: 0 5px 5px -5px #333;
+
+}

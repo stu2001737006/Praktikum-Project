@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Best Movies</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/img/fav icon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>    
+    <script src="js/vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ajax-bootstrap-select/1.4.5/js/ajax-bootstrap-select.min.js" integrity="sha512-HExUHcDgB9r00YwaaDe5z9lTFmTChuW9lDkPEnz+6/I26/mGtwg58OHI324cfqcnejphCl48MHR3SFQzIGXmOA==" crossorigin="anonymous"></script>
+    <script src="js/apiTransaction.js"></script>
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="row d-flex ml-1">
+            <div class="col-md-4">     
+                <a href="index.html"><img src="assets/img/logo.png"></a>
+            </div>
+            <div class="col-md-8 align-items-center justify-content-center mt-4">
+                <h2 id="test">Място за вашата реклама!</h2>
+                <h6><i class="fa fa-phone" aria-hidden="true"> +359 999 99 99</i></h6>
+                <h6><i class="fas fa-envelope-open"> <a href="mailto:info@bestmovies.bg" class="text-light">info@bestmovies.bg</a></i></h6>
+            </div>
+
+        </div>
+    </header>
+    <nav>
+        <div class="row justify-content-between">
+            <div class="col-md-3 mt-2">
+                <button type="button" class="btn btn-danger m-2 btn1 shadow"><i class="fas fa-filter ">Филтър</i></button>
+            </div>
+            <div class="col-md-5 mt-2 input-group m-3">
+                <input  class="form-control" type="text" placeholder="Търси.." name="search" id="inputValue">
+                <div class="input-group-append">
+                    <button class="btn btn-danger pl-4 pr-4" type="button" id="search"><i class="fa fa-search text-light"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="filter">
+        <div class="row">
+            <div class="col-md-4">
+                <label for="select-year">Година:</label>
+
+                <select class="custom-select box"  name="year" id="select-year">
+                    <option value="" selected disabled>Избери година</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="sort">Критерий:</label>
+
+                <select class="custom-select box" name="year" id="sort">
+                    <option value="" selected disabled>Сортирай по</option>
+                    <option value="trending">Тренд филми</option>
+                    <option value="popular">Най-популярни</option>
+                    <option value="top_rated">Най-харесани</option>
+                </select>
+            </div>
+            <div class="col-md-4 form-check d-inline-block justify-content-center">
+                <label>Жанр:</label>
+                <div class="box pt-2 pb-2">
+                    <label class="container" >Всички
+                        <input type="checkbox" onClick="toggle(this)" >
+                        <span class="checkmark"></span>
+                    </label>
+                    
+
+                    <label class="container">Комедия
+                        <input type="checkbox" value="comedy" name="foo">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Екшън
+                        <input type="checkbox" value="action" name="foo">
+                        <span class="checkmark"></span>
+                    </label>
+                    
+                    <label class="container">Драма
+                        <input type="checkbox" value="drama" name="foo">
+                        <span class="checkmark"></span>
+                    </label>
+                    
+                    <label class="container" >Анимация
+                        <input type="checkbox" value="animation" name="foo">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Фантастика
+                        <input type="checkbox" value="fantasy" name="foo">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Документален
+                        <input type="checkbox" value="documentary" name="foo">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Романтичен
+                        <input type="checkbox" value="romantic" name="foo">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>       
+        </div>       
+    </div>
+    <div id="pageContainer" class="row d-flex">
+        <div id="movies-container">
+        </div>
+    </div>
+    <footer>
+        <span>2020 © bestmovies.bg</span>
+    </footer>
+    
+</body>
+</html>
